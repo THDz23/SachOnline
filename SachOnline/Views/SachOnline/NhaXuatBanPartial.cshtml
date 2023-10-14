@@ -5,6 +5,6 @@
     </li>
     @foreach(var item in Model)
             {
-               <li><a href="@Url.Action("SachTheoNXB","SachOnline",new {id = item.MaNXB })" class="list-group-item">@item.TenNXB</a> </li>
+               <li><a href="@Url.Action("SachTheoNXB","SachOnline",new {iMaCD = item.MaNXB })" class="list-group-item">@item.TenNXB</a> </li>
             }
 </ul>

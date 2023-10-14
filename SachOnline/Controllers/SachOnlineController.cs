@@ -58,10 +58,13 @@ namespace SachOnline.Controllers
             var sach = from s in data.SACHes where s.MaCD == iMaCD select s;
             return View(sach.ToPagedList(iPageNum,iSize));
         }
-        public ActionResult SachTheoNXB(int id)
+        public ActionResult SachTheoNXB(int iMaCD,int ? page)
         {
-            var sach = from s in data.SACHes where s.MaNXB == id select s;
-            return View(sach);
+            ViewBag.MaCD = iMaCD;
+            int iSize = 3;
+            int iPageNum = (page ?? 1);
+            var sach = from s in data.SACHes where s.MaNXB == iMaCD select s;
+            return View(sach.ToPagedList(iPageNum,iSize));
         }
         public ActionResult ChiTietSach(int id)
         {

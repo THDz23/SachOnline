@@ -24,14 +24,14 @@
         </div>
     }
 </div>
-@*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber>)/@Model.PageCount*@
+Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
 <div class="MenuTrang">
     @Html.PagedListPager(Model,page => Url.Action("SachTheoChuDe",new {iMaCD = ViewBag.MaCD,page = page}))
 </div>
-@*<style>
+<style>
     .MenuTrang{
         display: inline;
         text-align: center;
     }
-</style>*@
+</style>
 
