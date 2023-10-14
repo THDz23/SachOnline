@@ -21,10 +21,12 @@ namespace SachOnline.Controllers
         {
             return data.SACHes.OrderByDescending(a => a.SoLuongBan).Take(count).ToList();
         }
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            var listSachMoi = LaySachMoi(6);
-            return View(listSachMoi);
+            var listSachMoi = LaySachMoi(20);
+            int iPageSize = 6;
+            int iPageNum = (page ?? 1);
+            return View(listSachMoi.ToPagedList(iPageNum,iPageSize));
         }
         public ActionResult ChuDePartial()
         {
