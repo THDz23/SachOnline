@@ -1,0 +1,88 @@
+﻿<h2 class="text-center">SÁCH BÁN NHIỀU</h2>
+<hr />
+<div class="row">
+    @foreach (var sach in Model)
+    {
+    <div class="col-lg-6 col-md-6">
+            <div class="media">
+                <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/@sach.AnhBia" alt="placeholder image" /></a></div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="@Url.Action("ChiTietSach","SachOnline",new { id = sach.MaSach})">@sach.TenSach</a></h4>
+                    Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                </div>
+            </div>
+        <hr />
+    </div>
+        }
+
+
+        @*<div class="col-lg-6 col-md-6">
+            <div class="media-object-default">
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH001.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 1</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH002.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 2</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH003.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 3</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <div class="media-object-default">
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH004.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 4</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH005.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 5</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+
+                <div class="media">
+                    <div class="media-left"><a href="#"><img class="media-object imgsachbannhieu" src="~/Images/TH006.jpg" alt="placeholder image" /></a></div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Ten san pham 6</h4>
+                        Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.Mo ta san pham chi tiet.
+                    </div>
+                </div>
+
+
+            </div>
+        </div>*@
+
+    </div>
+        <!--Row-->
