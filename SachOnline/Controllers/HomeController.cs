@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SachOnline.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace SachOnline.Controllers
 {
     public class HomeController : Controller
     {
+
+        dbSachOnlineDataContext db = new dbSachOnlineDataContext();
         public ActionResult Index()
         {
             return View();
