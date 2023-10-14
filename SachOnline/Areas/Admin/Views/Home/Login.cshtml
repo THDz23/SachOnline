@@ -9,10 +9,11 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Login</title>
-    @Styles.Render("~/Content/Adimin/css")
+    <link href="~/Content/css/structure.css" rel="stylesheet" />
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="~/Admin/Home/Login" mothod="post" class="box login">
+    <form action="/Admin/Home/Login" method="post" class="box login">
         <fieldset class="boxBody">
             <h4 style="text-align:center;font-weight:bold">LOGIN ADMIN</h4>
             <label>Username</label>
