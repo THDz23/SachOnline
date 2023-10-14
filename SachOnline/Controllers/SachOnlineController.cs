@@ -73,5 +73,9 @@ namespace SachOnline.Controllers
             var sach = from s in data.SACHes where s.MaSach == id select s;
             return View(sach.Single());
         }
+        public ActionResult LoginLogout()
+        {
+            return PartialView("LoginLogoutPartial");
+        }
     }
 }

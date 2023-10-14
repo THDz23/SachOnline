@@ -114,5 +114,11 @@ namespace SachOnline.Controllers
             }
             return this.DangKy();
         }
+
+        public ActionResult Login(string url)
+        {
+            
+            return Redirect(url);
+        }
     }
 }

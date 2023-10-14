@@ -11,19 +11,10 @@
         <li class="active"><a href="#">TRANG CHỦ</a></li>
         <li class=""><a href="#">GIỚI THIỆU</a></li>
         <li class=""><a href="#">LIÊN HỆ</a></li>
-        <li class=""><a href="#">SÁCH THEO CHỦ ĐỀ</a></li>
-        <li class=""><a href="#">SÁCH THEO NHÀ XUẤT BẢN</a></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Người dùng <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>Đăng ký</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Đăng nhập</a></li>
-            </ul>
-        </li>
+        <li>@Html.Action("LoginLogout", "SachOnline")</li>
         <li>@Html.Action("GioHangPartial", "GioHang")</li>
     </ul>
 
