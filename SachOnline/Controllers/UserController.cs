@@ -25,10 +25,11 @@ namespace SachOnline.Controllers
         {
             return View();
         }
-        public ActionResult DangNhap(FormCollection collection)
+        public ActionResult DangNhap(FormCollection collection,string url)
         {
             var sTenDN = collection["TenDN"];
             var sMatKhau = collection["MatKhau"];
+            url = Request["Url"];
             if (string.IsNullOrEmpty(sTenDN))
             {
                 ViewData["Err1"] = "Bạn chưa nhập tên đăng nhập";
@@ -50,7 +51,7 @@ namespace SachOnline.Controllers
                     ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
                 }
             }
-            return View();
+            return Redirect(url);
         }
         [HttpPost]
         public ActionResult DangKy(FormCollection collection,KHACHHANG kh)

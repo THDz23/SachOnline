@@ -108,9 +108,9 @@ namespace SachOnline.Controllers
         {
             if(Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
             {
-                return RedirectToAction("DangNhap", "User");
+                return RedirectToAction("DangNhap", "User", new { url = "https://localhost:44371/GioHang/GioHang" });
             }
-            if(Session["GioHang"] == null)
+            if (Session["GioHang"] == null)
             {
                 return RedirectToAction("Index", "SachOnline");
             }
