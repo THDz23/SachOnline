@@ -996,6 +996,7 @@
     </Content>
     <Content Include="Areas\Admin\Views\Sach\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Sach\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Sach\Edit.cshtml" />
     <None Include="Models\dbSachOnline.dbml.layout">
       <DependentUpon>dbSachOnline.dbml</DependentUpon>
     </None>
