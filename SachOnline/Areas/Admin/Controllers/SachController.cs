@@ -104,7 +104,7 @@ namespace SachOnline.Areas.Admin.Controllers
             var cthdh = db.CHITIETDATHANGs.Where(ct => ct.MaSach == id);
             if(cthdh.Count() > 0)
             {
-                ViewBag.ThongBao = "Sách này đang có trong bảng chi tiết đặt hàng <br>" + "Nếu muốn xóa thì phải xóa hết mã sách trong bảng chi tiết đặt hàng";
+                ViewBag.ThongBao = "Sách này đang có trong bảng chi tiết đặt hàng <br> " + "Nếu muốn xóa thì phải xóa hết mã sách trong bảng chi tiết đặt hàng";
                 return View(sach);
             }
             var vietsach = db.VIETSACHes.Where(vs => vs.MaSach == id).ToList();
