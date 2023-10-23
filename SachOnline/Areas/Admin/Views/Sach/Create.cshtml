@@ -5,7 +5,7 @@
 }
 <script src="~/ckeditor/ckeditor.js"></script>
 <h2>THÊM SÁCH</h2>
-@*Thêm thuộc tính cho form để upload ảnh*@
+@*Thêm thuộc tính cho form để upload ảnh //  new { @enctype = "multipart/form-data" } lấy đường dẫn của ảnh *@
 @using (Html.BeginForm("Create", "Sach", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()

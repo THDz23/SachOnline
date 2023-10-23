@@ -59,19 +59,19 @@ namespace SachOnline.Models
     partial void DeleteVIETSACH(VIETSACH instance);
     #endregion
 		
+		public dbSachOnlineDataContext() : 
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SachOnlineConnectionString1"].ConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
+		
 		public dbSachOnlineDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-
-        public dbSachOnlineDataContext() :
-                base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SachOnlineConnectionString"].ConnectionString, mappingSource)
-        {
-            OnCreated();
-        }
-
-        public dbSachOnlineDataContext(System.Data.IDbConnection connection) : 
+		
+		public dbSachOnlineDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
