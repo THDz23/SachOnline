@@ -43,7 +43,7 @@ namespace SachOnline.Areas.Admin.Controllers
         }
         public ActionResult Details(int id)
         {
-            var chude = db.SACHes.SingleOrDefault(n => n.MaCD == id);
+            var chude = db.CHUDEs.SingleOrDefault(n => n.MaCD == id);
             if (chude == null)
             {
                 Response.StatusCode = 404;

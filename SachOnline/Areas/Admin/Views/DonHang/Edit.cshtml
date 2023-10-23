@@ -1,0 +1,71 @@
+﻿@model SachOnline.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ĐIỀU CHỈNH THÔNG TIN ĐƠN HÀNG</h2>
+
+@using (Html.BeginForm("Edit","DonHang",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MaDonHang)
+    <div class="form-group">
+        <label class="control-label col-md-2"> Mã đơn hàng:  </label>
+        <div class="col-md-10">
+            <input type="text" size="100" name="kDH" value="@Model.MaDonHang" readonly />
+        </div>
+    </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DaThanhToan, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DaThanhToan, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DaThanhToan, "", new { @class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tình trạng giao</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="TinhTrang" value="@Model.TinhTrangGiaoHang"  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ngày đặt:  </label>
+            <div class="col-md-10">
+                <input type="datetime" name="dNgaydat"  value="@Convert.ToDateTime(Model.NgayDat)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ngày giao: </label>
+            <div class="col-md-10">
+                <input type="datetime" name="dNgaygiao" value="@Convert.ToDateTime(Model.NgayGiao)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Mã khách:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="iMaK" value="@Model.MaKH" readonly />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu thông tin" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ SÁCH", "Index")
+</div>
