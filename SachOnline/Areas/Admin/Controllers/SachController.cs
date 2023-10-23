@@ -33,7 +33,6 @@ namespace SachOnline.Areas.Admin.Controllers
         {
             ViewBag.MaCD = new SelectList(db.CHUDEs.ToList().OrderBy(n => n.TenChuDe), "MaCD", "TenChuDe");
             ViewBag.MaNXB = new SelectList(db.NHAXUATBANs.ToList().OrderBy(n => n.TenNXB), "MaNXB", "TenNXB");
-
             if (fFileUpload == null)
             {
                 ViewBag.ThongBao = "Hãy chọn ảnh bìa.";
